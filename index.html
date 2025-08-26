@@ -7,6 +7,9 @@
     <title>Vay Nhanh Tín Chấp - Tailwind CSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       /* Thiết lập font chữ và reset cơ bản */
 
       /* Vùng chứa danh sách */
@@ -552,7 +555,7 @@
               rgb(110, 57, 216)
             );
           "
-          class="p-8 text-[red] w-full rounded-[10px] mt-5"
+          class="p-5 text-[red] w-full rounded-[10px] mt-5"
         >
           <h3
             class="text-[24px] font-bold text-center text-white uppercase mt-4"
@@ -601,10 +604,12 @@
             <div class="border-b-2 border-dashed border-white/50 my-5"></div>
           </div>
           <!-- button call -->
-          <div class="flex items-center justify-between gap-1">
+          <div
+            class="flex items-center justify-between gap-1 break-keep whitespace-nowrap"
+          >
             <a
-              href="#"
-              class="flex items-center bg-white text-purple-600 font-bold text-[12px] uppercase tracking-wider px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              href="#loanForm"
+              class="flex items-center bg-white text-purple-600 font-bold text-[12px] uppercase flex items-center justify-center tracking-wider py-3 rounded-[12px] shadow-md transition transform hover:scale-105 w-full max-w-[170px]"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-purple-600 animate-fast-pulse"
@@ -615,12 +620,12 @@
                   d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3zM416 288c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v-16c0-8.8-7.2-16-16-16z"
                 />
               </svg>
-              <span>Đăng ký ngay</span>
+              <span class="">Đăng ký ngay</span>
             </a>
 
             <a
               href="#"
-              class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              class="flex items-center flex items-center justify-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] py-3 rounded-[12px] shadow-md transition transform hover:scale-105 w-full max-w-[170px]"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -786,10 +791,12 @@
             </ul>
           </div>
           <!-- button call 2 -->
-          <div class="flex items-center justify-between mt-4 gap-1">
+          <div
+            class="flex items-center justify-between mt-4 gap-1 break-keep whitespace-nowrap"
+          >
             <a
-              href="#"
-              class="flex items-center bg-[#6e39d8] text-white font-bold text-[12px] uppercase tracking-wider px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              href="#loanForm"
+              class="flex items-center bg-[#6e39d8] text-white font-bold text-[12px] flex items-center justify-center w-full max-w-[170px] uppercase tracking-wider py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -805,7 +812,7 @@
 
             <a
               href="#"
-              class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              class="flex items-center flex items-center justify-center w-full max-w-[170px] border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -1121,10 +1128,12 @@
           <div class="border-b-2 border-dashed border-white/50 my-5"></div>
         </div>
         <!-- button call -->
-        <div class="flex items-center justify-between gap-1">
+        <div
+          class="flex items-center justify-between gap-1 break-keep whitespace-nowrap"
+        >
           <a
-            href="#"
-            class="flex items-center bg-white text-purple-600 font-bold text-[12px] uppercase tracking-wider px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+            href="#loanForm"
+            class="flex items-center flex items-center justify-center w-full max-w-[170px] bg-white text-purple-600 font-bold text-[12px] uppercase tracking-wider py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
           >
             <svg
               class="w-4 h-4 mr-3 fill-purple-600 animate-fast-pulse"
@@ -1140,7 +1149,7 @@
 
           <a
             href="#"
-            class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+            class="flex items-center flex items-center justify-center w-full max-w-[170px] border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
           >
             <svg
               class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -1414,10 +1423,12 @@
         </div>
       </div>
 
-      <div class="flex items-center justify-between px-6 gap-1">
+      <div
+        class="flex items-center justify-between px-6 gap-1 break-keep whitespace-nowrap"
+      >
         <a
-          href="#"
-          class="flex items-center bg-white text-purple-600 font-bold text-[12px] uppercase tracking-wider px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+          href="#loanForm"
+          class="flex items-center bg-white text-purple-600 font-bold text-[12px] uppercase tracking-wider w-full max-w-[170px] flex items-center justify-center py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
         >
           <svg
             class="w-4 h-4 mr-3 fill-purple-600 animate-fast-pulse"
@@ -1433,7 +1444,7 @@
 
         <a
           href="#"
-          class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+          class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] w-full max-w-[170px] flex items-center justify-center py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
         >
           <svg
             class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -1592,10 +1603,12 @@
             </ul>
           </div>
           <!-- button call 2 -->
-          <div class="flex items-center justify-between mt-4 gap-1">
+          <div
+            class="flex items-center justify-between mt-4 gap-1 break-keep whitespace-nowrap"
+          >
             <a
-              href="#"
-              class="flex items-center bg-[#6e39d8] text-white font-bold text-[12px] uppercase tracking-wider px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              href="#loanForm"
+              class="flex items-center flex items-center justify-center w-full max-w-[170px] bg-[#6e39d8] text-white font-bold text-[12px] uppercase tracking-wider py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -1611,7 +1624,7 @@
 
             <a
               href="#"
-              class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              class="flex items-center flex items-center justify-center w-full max-w-[170px] border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -1753,10 +1766,12 @@
             tốt nhất! Lãi suất cho vay ưu đãi nhất !
           </p>
           <!-- button call 2 -->
-          <div class="flex items-center justify-between mt-4 gap-1">
+          <div
+            class="flex items-center justify-between mt-4 gap-1 break-keep whitespace-nowrap"
+          >
             <a
-              href="#"
-              class="flex items-center bg-[#6e39d8] text-white font-bold text-[12px] uppercase tracking-wider px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              href="#loanForm"
+              class="flex items-center flex items-center justify-center w-full max-w-[170px] bg-[#6e39d8] text-white font-bold text-[12px] uppercase tracking-wider py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -1772,7 +1787,7 @@
 
             <a
               href="#"
-              class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              class="flex items-center flex items-center justify-center w-full max-w-[170px] border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -1846,10 +1861,12 @@
           <div class="border-b-2 border-dashed border-white/50 my-5"></div>
         </div>
         <!-- button call -->
-        <div class="flex items-center justify-between gap-1">
+        <div
+          class="flex items-center justify-between gap-1 break-keep whitespace-nowrap"
+        >
           <a
-            href="#"
-            class="flex items-center bg-white text-purple-600 font-bold text-[12px] uppercase tracking-wider px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+            href="#loanForm"
+            class="flex items-center flex items-center justify-center w-full max-w-[170px] bg-white text-purple-600 font-bold text-[12px] uppercase tracking-wider py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
           >
             <svg
               class="w-4 h-4 mr-3 fill-purple-600 animate-fast-pulse"
@@ -1865,7 +1882,7 @@
 
           <a
             href="#"
-            class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+            class="flex items-center flex items-center justify-center w-full max-w-[170px] border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
           >
             <svg
               class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -2023,10 +2040,12 @@
             class="w-full h-auto block mt-4"
           />
           <!-- button call 2 -->
-          <div class="flex items-center justify-between mt-4 gap-1">
+          <div
+            class="flex items-center justify-between mt-4 gap-1 break-keep whitespace-nowrap"
+          >
             <a
-              href="#"
-              class="flex items-center bg-[#6e39d8] text-white font-bold text-[12px] uppercase tracking-wider px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              href="#loanForm"
+              class="flex items-center flex items-center justify-center w-full max-w-[170px] bg-[#6e39d8] text-white font-bold text-[12px] uppercase tracking-wider py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -2042,7 +2061,7 @@
 
             <a
               href="#"
-              class="flex items-center border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] px-6 py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
+              class="flex items-center flex items-center justify-center w-full max-w-[170px] border border-[white] bg-gradient-to-b from-red-500 to-red-600 text-white font-bold text-[12px] py-3 rounded-[12px] shadow-md transition transform hover:scale-105"
             >
               <svg
                 class="w-4 h-4 mr-3 fill-white animate-fast-pulse"
@@ -2058,6 +2077,158 @@
           </div>
         </div>
       </div>
+    </div>
+    <!-- section form -->
+    <div class="max-w-2xl mx-auto px-4">
+      <h3
+        class="text-[24px] uppercase mt-8 text-[#8c52ff] font-bold text-center"
+      >
+        Đăng kí vay nhanh
+      </h3>
+
+      <p class="text-[15px] text-center">
+        Vui lòng để lại chính xác thông tin liên hệ và chọn sản phẩm vay. Chúng
+        tôi sẽ liên hệ tư vấn cho bạn ngay.
+      </p>
+
+      <div
+        style="
+          background-image: linear-gradient(
+            rgb(140, 82, 255),
+            rgb(110, 57, 216)
+          );
+        "
+        class="shadow-lg rounded-xl p-8 w-full mt-5"
+      >
+        <form id="loanForm" class="text-[13px]">
+          <div class="mb-5">
+            <input
+              type="text"
+              id="ho-ten"
+              name="ho-ten"
+              placeholder="Họ và Tên"
+              class="w-full px-4 py-3 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+            />
+          </div>
+
+          <div class="mb-6">
+            <input
+              type="tel"
+              id="so-dien-thoai"
+              name="so-dien-thoai"
+              placeholder="Số điện thoại"
+              class="w-full px-4 py-3 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+            />
+          </div>
+
+          <h3 class="text-white text-[14px] font-bold mb-3">
+            Chọn sản phẩm vay:
+          </h3>
+          <div class="mb-6 bg-white rounded-lg p-5">
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <input
+                  id="vay-the-chap"
+                  name="san-pham-vay"
+                  type="radio"
+                  value="Vay nhanh thế chấp tài sản"
+                  class="focus:ring-purple-500 h-4 w-4 text-purple-600 border-gray-300"
+                  required
+                />
+                <label
+                  for="vay-the-chap"
+                  class="ml-3 block text-sm font-medium text-gray-700"
+                  >Vay nhanh thế chấp tài sản</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input
+                  id="vay-theo-luong"
+                  name="san-pham-vay"
+                  type="radio"
+                  value="Vay nhanh theo lương"
+                  class="focus:ring-purple-500 h-4 w-4 text-purple-600 border-gray-300"
+                  required
+                />
+                <label
+                  for="vay-theo-luong"
+                  class="ml-3 block text-sm font-medium text-gray-700"
+                  >Vay nhanh theo lương</label
+                >
+              </div>
+              <div class="flex items-center">
+                <input
+                  id="vay-tra-gop"
+                  name="san-pham-vay"
+                  type="radio"
+                  value="Vay trả góp ô tô cũ/mới"
+                  class="focus:ring-purple-500 h-4 w-4 text-purple-600 border-gray-300"
+                />
+                <label
+                  for="vay-tra-gop"
+                  class="ml-3 block text-sm font-medium text-gray-700"
+                  >Vay trả góp ô tô cũ/mới</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <input
+              type="text"
+              id="so-tien-can-vay"
+              name="so-tien-can-vay"
+              placeholder="Số tiền cần vay"
+              class="w-full px-4 py-3 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+              required
+            />
+          </div>
+
+          <div class="mb-8">
+            <textarea
+              id="muc-dich-vay"
+              name="muc-dich-vay"
+              rows="4"
+              placeholder="Mục đích vay. Ví dụ: mua nhà, mua xe, tiêu dùng,..."
+              class="w-full px-4 py-3 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+            ></textarea>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="w-full flex items-center justify-center bg-red-500 text-white font-bold py-3 px-4 hover:bg-red-600 shadow-lg border-[white] border rounded-[15px]"
+            >
+              <svg
+                class="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+              GỬI THÔNG TIN
+            </button>
+          </div>
+        </form>
+      </div>
+      <p class="text-[16px] text-left mt-5">
+        Chú ý: Chúng tôi không phải là đơn vị cung cấp dịch vụ cho vay và không
+        phát hành các khoản vay. Dịch vụ của Chúng tôi giúp kết nối khách hàng
+        với các Ngân hàng & Tổ chức tín dụng uy tín tại Việt Nam.
+        <br />
+
+        Chúng tôi không tính phí sử dụng dịch vụ. Chi phí cuối cùng mà người vay
+        phải trả phụ thuộc vào từng khoản vay. Người dùng sẽ nhận được thông tin
+        đầy đủ và chính xác về APR, cũng như tất cả các khoản phí trước khi ký
+        hợp đồng vay.
+      </p>
     </div>
 
     <!-- footer  -->
@@ -2652,4 +2823,55 @@
       </div>
     </div>
   </body>
+  <script>
+    // 1. Chọn form bằng ID
+    const loanForm = document.getElementById("loanForm");
+
+    // 2. Thêm một sự kiện "submit" cho form
+    loanForm.addEventListener("submit", function (event) {
+      // 3. Ngăn chặn hành vi mặc định của form (tải lại trang)
+      event.preventDefault();
+
+      // 4. Lấy giá trị từ các trường input
+      const hoTen = document.getElementById("ho-ten").value;
+      const soDienThoai = document.getElementById("so-dien-thoai").value;
+      const soTienCanVay = document.getElementById("so-tien-can-vay").value;
+      const mucDichVay = document.getElementById("muc-dich-vay").value;
+
+      // 5. Lấy giá trị từ radio button được chọn
+      const sanPhamVayChecked = document.querySelector(
+        'input[name="san-pham-vay"]:checked'
+      );
+      // Kiểm tra xem người dùng đã chọn sản phẩm vay chưa
+      const sanPhamVay = sanPhamVayChecked
+        ? sanPhamVayChecked.value
+        : "Chưa chọn";
+
+      // 6. Tạo một đối tượng (object) để chứa tất cả dữ liệu
+      const formData = {
+        "entry.1860362523": hoTen,
+        "entry.77792435": soDienThoai,
+        "entry.673449796": soTienCanVay,
+        "entry.731717771": sanPhamVay,
+        "entry.1318484682": mucDichVay,
+      };
+
+      // 7. Hiển thị dữ liệu
+
+      // Hiển thị trong console của trình duyệt (Nhấn F12 để mở)
+      console.log("Dữ liệu form đã lấy:", formData);
+      let queryString = new URLSearchParams(formData);
+      queryString = queryString.toString();
+      const xhr = new XMLHttpRequest();
+      xhr.open(
+        "POST",
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSecHX9npzA6rZQo28B1zGaf8fvGhuAtMiXtCDGQ4ohm5MmAlg/formResponse",
+        true
+      );
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.send(queryString);
+
+      loanForm.reset();
+    });
+  </script>
 </html>
