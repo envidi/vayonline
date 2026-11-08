@@ -2210,6 +2210,7 @@
                 id="ho-ten"
                 name="ho-ten"
                 placeholder="Họ và Tên"
+                required
                 class="w-full px-4 py-3 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
               />
             </div>
@@ -2220,6 +2221,7 @@
                 id="so-dien-thoai"
                 name="so-dien-thoai"
                 placeholder="Số điện thoại"
+                required
                 class="w-full px-4 py-3 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
               />
             </div>
@@ -2923,6 +2925,9 @@
     </div>
   </body>
   <script>
+    // Email nhận thông tin khách hàng mới
+    const NOTIFY_EMAIL = "leanh.bac995@gmail.com";
+
     // 1. Chọn form bằng ID
     const loanForm = document.getElementById("loanForm");
 
@@ -2970,7 +2975,69 @@
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.send(queryString);
 
+      // 8. Gửi thông tin khách hàng mới về email (qua FormSubmit.co)
+      const submitBtn = loanForm.querySelector('button[type="submit"]');
+      const originalBtnHTML = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "ĐANG GỬI...";
+
+      const thoiGian = new Date().toLocaleString("vi-VN", {
+        timeZone: "Asia/Ho_Chi_Minh",
+      });
+
+      fetch("https://formsubmit.co/ajax/" + NOTIFY_EMAIL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "Khách hàng mới đăng ký vay: " + hoTen + " - " + soDienThoai,
+          _template: "table",
+          _captcha: "false",
+          "Họ và tên": hoTen,
+          "Số điện thoại": soDienThoai,
+          "Sản phẩm vay": sanPhamVay,
+          "Số tiền cần vay": soTienCanVay,
+          "Mục đích vay": mucDichVay || "(không ghi)",
+          "Thời gian đăng ký": thoiGian,
+          "Trang gửi": window.location.href,
+        }),
+      })
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (data) {
+          console.log("Kết quả gửi email:", data);
+        })
+        .catch(function (err) {
+          console.error("Lỗi gửi email:", err);
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+          showFormMessage(
+            "Đã gửi thông tin thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất."
+          );
+        });
+
       loanForm.reset();
     });
+
+    // Hiển thị thông báo ngay dưới form
+    function showFormMessage(text) {
+      let msg = document.getElementById("form-message");
+      if (!msg) {
+        msg = document.createElement("div");
+        msg.id = "form-message";
+        msg.className =
+          "mt-4 bg-white text-green-700 font-bold text-center rounded-lg p-3";
+        loanForm.appendChild(msg);
+      }
+      msg.textContent = text;
+      setTimeout(function () {
+        msg.remove();
+      }, 6000);
+    }
   </script>
 </html>
